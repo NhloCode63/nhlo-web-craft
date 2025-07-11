@@ -1,9 +1,8 @@
-
 import { Mail, MessageSquare, MapPin, Phone, Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-900/10 to-gray-900">
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-purple-900/10 to-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

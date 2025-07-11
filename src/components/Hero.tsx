@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Code, Palette, Zap } from 'lucide-react';
 
@@ -35,6 +34,13 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [displayText, isDeleting, loopNum, typingSpeed, words]);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Animated background elements */}
@@ -67,7 +73,10 @@ const Hero = () => {
           <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             View My Work
           </button>
-          <button className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+          <button 
+            onClick={scrollToContact}
+            className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+          >
             Get In Touch
           </button>
         </div>
