@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Code, Palette, Zap } from 'lucide-react';
 
@@ -52,9 +53,28 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight">
-            NH<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">LO</span>
-          </h1>
+          {/* Elegant Logo */}
+          <div className="flex items-center justify-center mb-6">
+            <div className="relative">
+              {/* Code brackets with gradient */}
+              <div className="text-6xl md:text-8xl font-mono font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 flex items-center">
+                <span className="text-purple-400">&lt;</span>
+                <span className="mx-2 font-sans tracking-tight">NHLO</span>
+                <span className="text-blue-400">.</span>
+                <span className="text-indigo-400">CODE</span>
+                <span className="text-purple-400">/&gt;</span>
+              </div>
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 text-6xl md:text-8xl font-mono font-bold text-purple-400/20 blur-sm flex items-center">
+                <span>&lt;</span>
+                <span className="mx-2 font-sans tracking-tight">NHLO</span>
+                <span>.</span>
+                <span>CODE</span>
+                <span>/&gt;</span>
+              </div>
+            </div>
+          </div>
+          
           <div className="text-2xl md:text-4xl text-gray-300 mb-6 h-12">
             <span className="font-light">I'm a </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 font-semibold">
